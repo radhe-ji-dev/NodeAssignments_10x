@@ -1,13 +1,24 @@
+const process = require("process");
 function getNameFromCommandLine() {
-    // Write you code here, name should be taken as args in process.argv
+    const argArray=process.argv;
+    lenOfArr=argArray.length;
+    return argArray[lenOfArr-1]
 }
 
 function getNameFromEnv() {
-    // Write your code here
+    const envVariable=process.env.name;
+    return envVariable;
 }
 
 function getNameFromReadLine() {
-    // Write your code here
+    const readline=require("readline");
+    const Interface=readline.createInterface(process.stdin,process.stdout);
+    Interface.setPrompt("Taking input") 
+    Interface.prompt()
+    Interface.on("line",(input)=>{
+        inputValue=input;
+        Interface.close();
+    }) 
 }
 
 module.exports = {

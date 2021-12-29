@@ -1,0 +1,44 @@
+* {
+  /* width: 100%; */
+  box-sizing: border-box;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Header {
+  text-align: center;
+  font-family: Al Bayan;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+.Header h1 {
+  font-size: 3em;
+}
+.Header button {
+  padding: 0.5em 1em;
+  font-size: 2em;
+  font-size: 1.5em;
+  font-family: Chalkboard SE;
+}
+.UsersContainer {
+  background-color: aliceblue;
+  width: 50%;
+  padding: 5%;
+}
+
+.card {
+  margin: 4%;
+  text-align: -webkit-center;
+  padding: 5% 5%;
+  background: antiquewhite;
+  border-radius: 2%;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

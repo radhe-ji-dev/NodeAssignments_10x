@@ -21,8 +21,8 @@ app.get('/form', (req, res) => {
 app.post('/user/add',(req,res)=>{
     // console.log(req.body)
     const obj={
-        name: req.body.username,
-        email: req.body.usermail
+        name: req.body.name,
+        email: req.body.email
     }
     users.push(obj)
     res.render('homepage.ejs', { data: users });

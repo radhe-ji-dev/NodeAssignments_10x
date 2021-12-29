@@ -18,8 +18,8 @@ app.get('/', (req,res) => {
 app.get('/form', (req, res) => {
     res.render('form.ejs');
 })
-app.post('/',(req,res)=>{
-    console.log(req.body)
+app.post('/user/add',(req,res)=>{
+    // console.log(req.body)
     const obj={
         name: req.body.username,
         email: req.body.usermail
@@ -27,6 +27,6 @@ app.post('/',(req,res)=>{
     users.push(obj)
     res.render('homepage.ejs', { data: users });
 } );
-app.listen(8001,()=>{
+app.listen(3000,()=>{
     console.log("im listening");
 })

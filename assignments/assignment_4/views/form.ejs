@@ -10,11 +10,19 @@
 </head>
 <body>
     <section class="formContainer">
-        <form action="/user/add" method="post">
+        <form action="/users/add" method="post">
             <label for="Name">First name:</label><br>
             <input type="text" id="Name" name="name"  required><br>
             <label for="Mail">Mail:</label><br>
             <input type="email" id="Mail" name="email" required ><br><br>
+            <div class="RadioClass">
+                <input type="radio" id="isPromoted" name="isPromoted" value="Null">
+                <label for="isPromoted">Null</label>
+                <input type="radio" id="isPromoted" name="isPromoted" value="true">
+                <label for="isPromoted">True</label>
+                <input type="radio" id="isPromoted" name="isPromoted" value="false">
+                <label for="isPromoted">False</label>
+            </div>
             <input type="submit" value="Submit">
         </form>
     </section>

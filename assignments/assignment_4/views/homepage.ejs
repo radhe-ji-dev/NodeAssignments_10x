@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <section class="mainContent">
+        <div class="Header">
+            <h1>Our Users</h1>
+            <button type="button" onclick="location.href='/form' ">Add User</button>
+        </div>
+        <div class="UsersContainer">
+            <%if(data.length > 0){ data.forEach((user)=>{%>
+                <div class="card <%= user.isPromoted%>">
+                    <h2>Name: <span><%= user.name %></span></h2>
+                    <h3>Email: <span><%= user.email %></span></h3>
+                    <% let promote="Demote"%>
+                    <% if(user.isPromoted!="true"){promote="Promote"}%>
+                    <form method="POST" action="/users/<%= user._id %>?_method=PUT">
+                        <button id="edit-<%= user.name %>" type="submit"><%= promote %></button>
+                    </form>
+                    <form method="POST" action="/users/<%= user._id %>?_method=DELETE">
+                        <button id="delete-<%= user.name %>">Delete</button>
+                    </form>
+                </div>
+            <%});}else{%>
+                <h1>No users are added yet</h1>
+            <%}%>
+        </div>
+    </section>
+</body>
+</html>

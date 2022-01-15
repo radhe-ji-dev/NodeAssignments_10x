@@ -1,0 +1,98 @@
+* {
+  /* width: 100%; */
+  box-sizing: border-box;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+.Header {
+  text-align: center;
+  font-family: Al Bayan;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+.Header h1 {
+  font-size: 3em;
+}
+.Header button {
+  padding: 0.5em 1em;
+  font-size: 2em;
+  font-size: 1.5em;
+  font-family: Chalkboard SE;
+}
+.UsersContainer {
+  background-color: aliceblue;
+  width: 50%;
+  padding: 5%;
+}
+
+.card {
+  margin: 4%;
+  text-align: -webkit-center;
+  padding: 5% 5%;
+  background: antiquewhite;
+  border-radius: 2%;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.formContainer {
+  background-color: aliceblue;
+  text-align: center;
+  padding: 10%;
+  height: 100%;
+  font-size: 2em;
+}
+
+input {
+  font-size: 0.5em;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type='submit'] {
+  width: 40%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.5em;
+}
+
+.card.false {
+  background-color: rgb(249, 109, 122);
+}
+.card.Null {
+  background-color: rgb(251, 251, 85);
+}
+.card.true {
+  background-color: rgb(141, 235, 141);
+}
+.card button {
+  width: 8em;
+  font-size: inherit;
+}
+span {
+  font-family: -apple-system;
+  color: rgb(98, 95, 95);
+}
+.RadioClass {
+  font-size: 0.6em;
+  width: 30%;
+  text-align: start;
+  margin: auto;
+}

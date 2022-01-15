@@ -7,16 +7,16 @@ const baseUrl = 'http://localhost:3000';
 describe('assignment_3', () => {
     test('Server is responding', async () => {
         const response = await request(baseUrl)
-			.get('/');
+            .get('/');
 
-		expect(response.statusCode).toBe(200);
+        expect(response.statusCode).toBe(200);
     });
 
     test('Check form', async () => {
         const response = await request(baseUrl)
             .get('/form');
 
-        ejs.renderFile(path.join(__dirname, '..', 'assignments', 'assignment_3', 'views', 'form.ejs'), {}, {}, function(err, str){
+        ejs.renderFile(path.join(__dirname, '..', 'assignments', 'assignment_3', 'views', 'form.ejs'), {}, {}, function (err, str) {
             expect(response.text).toEqual(str);
         });
     });
@@ -37,3 +37,4 @@ describe('assignment_3', () => {
         expect(userAddedResponse.text.includes('john.doe@gmail.com')).toBe(true);
     })
 });
+

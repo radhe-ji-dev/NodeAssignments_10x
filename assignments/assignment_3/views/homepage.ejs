@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
     <section class="mainContent">
         <div class="Header">
@@ -16,11 +18,14 @@
         <div class="UsersContainer">
             <% data.forEach((user)=>{%>
                 <div class="card">
-                    <h2>🙂<%= user.name %></h2>
-                    <h3>📫<%= user.email %></h3>
+                    <h2>NAME -><%= user.name %>
+                    </h2>
+                    <h3>Email -><%= user.email %>
+                    </h3>
                 </div>
-            <%});%>
+                <%});%>
         </div>
     </section>
 </body>
+
 </html>
